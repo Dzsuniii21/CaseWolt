@@ -643,46 +643,40 @@ section{padding:90px 7%}.dark{background:#101216}.section-title{font-size:40px;l
     gap: 22px;
   }
 }
-  
-/* Egységes méretezés az összes CaseWolt-tervhez */
-
-.cw-gallery__grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 320px));
-  justify-content: center;
-  align-items: stretch;
-  gap: 28px;
-}
-
-.cw-gallery__grid figure {
-  width: 100%;
+/* Csak az utólag hozzáadott 5 kép */
+.cw-gallery__grid figure.cw-extra-image {
+  width: 100% !important;
+  max-width: 260px !important;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
+  justify-self: center;
   padding: 8px;
-  margin: 0;
-  border: 1px solid #762b40;
+  border: 1px solid #8b3048;
   border-radius: 10px;
   background: #111012;
   overflow: hidden;
+  box-shadow: 0 6px 20px rgba(139, 48, 72, 0.18);
 }
 
-.cw-gallery__grid figure img {
-  width: 100%;
-  height: 220px;
-  flex-shrink: 0;
-  object-fit: contain;
-  object-position: center;
-  background: #09090a;
+.cw-gallery__grid figure.cw-extra-image img {
+  display: block;
+  width: 100% !important;
+  height: 180px !important;
+  max-height: 180px !important;
+  object-fit: contain !important;
+  background: #080809;
   border-radius: 5px;
 }
 
-.cw-gallery__grid figcaption {
-  flex: 1;
-  min-height: 60px;
-  box-sizing: border-box;
+.cw-gallery__grid figure.cw-extra-image figcaption {
+  padding: 12px 6px;
 }
 
+@media (max-width: 700px) {
+  .cw-gallery__grid figure.cw-extra-image {
+    width: 100% !important;
+    max-width: 320px !important;
+  }
+}
 @media (max-width: 700px) {
   .cw-gallery__grid {
     grid-template-columns: minmax(0, 320px);
@@ -697,11 +691,12 @@ section{padding:90px 7%}.dark{background:#101216}.section-title{font-size:40px;l
   </p>
 
   <div class="cw-gallery__grid">
+
+    <!-- 01 -->
     <figure>
-      <img
-        src="Untitled%20Project%20(5).png"
-        alt="CaseWolt lakberendezési alaprajz"
-        loading="lazy">
+      <img src="Untitled%20Project%20(5).png"
+           alt="CaseWolt lakberendezési alaprajz"
+           loading="lazy">
       <figcaption>
         <span>01</span>
         <div>
@@ -711,11 +706,11 @@ section{padding:90px 7%}.dark{background:#101216}.section-title{font-size:40px;l
       </figcaption>
     </figure>
 
+    <!-- 02 -->
     <figure>
-      <img
-        src="Untitled%20Project%20(9).png"
-        alt="CaseWolt belsőépítészeti tervrajz"
-        loading="lazy">
+      <img src="Untitled%20Project%20(9).png"
+           alt="CaseWolt belsőépítészeti tervrajz"
+           loading="lazy">
       <figcaption>
         <span>02</span>
         <div>
@@ -724,71 +719,77 @@ section{padding:90px 7%}.dark{background:#101216}.section-title{font-size:40px;l
         </div>
       </figcaption>
     </figure>
+
+    <!-- 03 -->
+    <figure class="cw-extra-image">
+      <img src="Untitled_Project_1.png"
+           alt="CaseWolt építészeti terv"
+           loading="lazy">
+      <figcaption>
+        <span>03</span>
+        <div>
+          <strong>Építészeti tervezés</strong>
+          <small>Egyedi terv</small>
+        </div>
+      </figcaption>
+    </figure>
+
+    <!-- 04 -->
+    <figure class="cw-extra-image">
+      <img src="sHR5479dpY.png"
+           alt="CaseWolt belsőépítészeti referencia"
+           loading="lazy">
+      <figcaption>
+        <span>04</span>
+        <div>
+          <strong>Belsőépítészeti koncepció</strong>
+          <small>Egyedi kialakítás</small>
+        </div>
+      </figcaption>
+    </figure>
+
+    <!-- 05 -->
+    <figure class="cw-extra-image">
+      <img src="gyhi4694UdE.png"
+           alt="CaseWolt lakberendezési referencia"
+           loading="lazy">
+      <figcaption>
+        <span>05</span>
+        <div>
+          <strong>Lakberendezés</strong>
+          <small>Tér és stílus</small>
+        </div>
+      </figcaption>
+    </figure>
+
+    <!-- 06 -->
+    <figure class="cw-extra-image">
+      <img src="BDa2717ntI.png"
+           alt="CaseWolt építészeti referencia"
+           loading="lazy">
+      <figcaption>
+        <span>06</span>
+        <div>
+          <strong>Komplex kivitelezés</strong>
+          <small>Precíz megoldások</small>
+        </div>
+      </figcaption>
+    </figure>
+
+    <!-- 07 -->
+    <figure class="cw-extra-image">
+      <img src="image.png"
+           alt="CaseWolt tervrajz és referencia"
+           loading="lazy">
+      <figcaption>
+        <span>07</span>
+        <div>
+          <strong>Egyedi projektek</strong>
+          <small>Minőség és precizitás</small>
+        </div>
+      </figcaption>
+    </figure>
+
   </div>
 </section>
-
-<figure>
-  <img src="Untitled_Project_1.png"
-       alt="CaseWolt építészeti terv"
-       loading="lazy">
-  <figcaption>
-    <span>03</span>
-    <div>
-      <strong>Építészeti tervezés</strong>
-      <small>Egyedi terv</small>
-    </div>
-  </figcaption>
-</figure>
-
-<figure>
-  <img src="sHR5479dpY.png"
-       alt="CaseWolt belsőépítészeti referencia"
-       loading="lazy">
-  <figcaption>
-    <span>04</span>
-    <div>
-      <strong>Belsőépítészeti koncepció</strong>
-      <small>Egyedi kialakítás</small>
-    </div>
-  </figcaption>
-</figure>
-
-<figure>
-  <img src="gyhi4694UdE.png"
-       alt="CaseWolt lakberendezési referencia"
-       loading="lazy">
-  <figcaption>
-    <span>05</span>
-    <div>
-      <strong>Lakberendezés</strong>
-      <small>Tér és stílus</small>
-    </div>
-  </figcaption>
-</figure>
-
-<figure>
-  <img src="BDa2717ntI.png"
-       alt="CaseWolt építészeti referencia"
-       loading="lazy">
-  <figcaption>
-    <span>06</span>
-    <div>
-      <strong>Komplex kivitelezés</strong>
-      <small>Precíz megoldások</small>
-    </div>
-  </figcaption>
-</figure>
-
-<figure>
-  <img src="image.png"
-       alt="CaseWolt tervrajz és referencia"
-       loading="lazy">
-  <figcaption>
-    <span>07</span>
-    <div>
-      <strong>Egyedi projektek</strong>
-      <small>Minőség és precizitás</small>
-    </div>
-  </figcaption>
-</figure>
 
